@@ -1,0 +1,85 @@
+body{
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+}
+.css-container{
+  background: yellow;
+  height: 400%;
+  width: 100%;
+  position: absolute;
+  -moz-transition-property: top;  
+  -moz-transition-duration: 1s;  
+  -webkit-transition-property: top;  
+  -webkit-transition-duration: 1s;
+  &[data-active="portfolio"]{
+    top: 0%;
+  }
+  &[data-active="main"]{
+    top: -100%;
+  }
+  &[data-active="contact"]{
+    top: -200%;
+  }
+}
+.css-portfolio{
+  background:red;
+  top: 0;
+  bottom: 75%;
+  margin-top: 0px;
+}
+.css-main{
+  background:green;
+  top: 25%;
+  bottom: 50%;
+}
+.css-contact{
+  background:blue;
+  top: 50%;
+  bottom: 25%;
+}
+.css-section{
+  position: absolute;
+  left: 0;
+  right: 0px;
+  overflow: auto;
+  margin: 0;
+}
+.css-nav{
+  position: absolute;
+  background: #333;
+  z-index: 1;
+  width: 100%;
+  height: 20px;
+  span{
+    position: absolute;
+    background: #333;
+    left: 50%;
+    margin-left: -55px;
+    line-height: 26px;
+    cursor: pointer;
+    height: 27px;
+    width: 100px;
+    color: #ccc;
+    font-family: arial;
+    text-align: center;
+    &.css-top{
+      top: -21px;
+      border-radius: 66px 66px 0px 0px;
+    }
+    &.css-bottom{
+      top: 18px;
+      border-radius: 0px 0px 66px 66px;
+    }
+  }
+  &.css-top{
+    top: 0;
+  }
+  &.css-bottom{
+    bottom: 0;
+  }
+  
+}
+.css-hidden {
+  display: none;
+}
