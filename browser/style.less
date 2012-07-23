@@ -4,7 +4,10 @@ body{
   overflow-y: hidden;
 }
 .css-container{
-  background: yellow;
+  background-image: url('./images/triangles.png');
+  background-image: url('./images/bubbles.png');
+  background-image: url('./images/paperfibers.png');
+  background-image: url('./images/wool.png');
   height: 400%;
   width: 100%;
   position: absolute;
@@ -23,18 +26,15 @@ body{
   }
 }
 .css-portfolio{
-  background:red;
   top: 0;
   bottom: 75%;
   margin-top: 0px;
 }
 .css-main{
-  background:green;
   top: 25%;
   bottom: 50%;
 }
 .css-contact{
-  background:blue;
   top: 50%;
   bottom: 25%;
 }
@@ -50,26 +50,26 @@ body{
   background: #333;
   z-index: 1;
   width: 100%;
-  height: 20px;
+  height: 8px;
   span{
     position: absolute;
     background: #333;
     left: 50%;
     margin-left: -55px;
-    line-height: 26px;
+    line-height: 30px;
     cursor: pointer;
-    height: 27px;
+    height: 30px;
     width: 100px;
     color: #ccc;
     font-family: arial;
     text-align: center;
     &.css-top{
-      top: -21px;
-      border-radius: 66px 66px 0px 0px;
+      top: -28px;
+      border-radius: 76px 76px 0px 0px;
     }
     &.css-bottom{
-      top: 18px;
-      border-radius: 0px 0px 66px 66px;
+      top: 5px;
+      border-radius: 0px 0px 76px 76px;
     }
   }
   &.css-top{
@@ -83,3 +83,4 @@ body{
 .css-hidden {
   display: none;
 }
+
