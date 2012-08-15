@@ -4,17 +4,14 @@ body{
   overflow-y: hidden;
 }
 .css-container{
-  background-image: url('./images/triangles.png');
-  background-image: url('./images/bubbles.png');
-  background-image: url('./images/paperfibers.png');
   background-image: url('./images/wool.png');
   height: 400%;
   width: 100%;
   position: absolute;
   -moz-transition-property: top;  
-  -moz-transition-duration: 1s;  
+  -moz-transition-duration: .4s;  
   -webkit-transition-property: top;  
-  -webkit-transition-duration: 1s;
+  -webkit-transition-duration: .4s;
   &[data-active="portfolio"]{
     top: 0%;
   }
@@ -40,10 +37,32 @@ body{
 }
 .css-section{
   position: absolute;
-  left: 0;
+  left: 0px;
   right: 0px;
-  overflow: auto;
+  overflow: hidden;
   margin: 0;
+}
+.css-profile-container{
+  background: red;
+  height: 80%;
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 14%;
+  margin-top: -40%;
+  .css-details{
+    width: 15%;
+    border-right: 1px solid;
+    height: 100%;
+    overflow: hidden;
+    background: green;
+  }
+  .css-overview{
+    float: right;
+    width: 85%;
+    height: 100%;
+    background: blue;
+  }
 }
 .css-nav{
   position: absolute;
@@ -66,10 +85,12 @@ body{
     &.css-top{
       top: -28px;
       border-radius: 76px 76px 0px 0px;
+      padding-bottom: 6px;
     }
     &.css-bottom{
-      top: 5px;
+      top: 0px;
       border-radius: 0px 0px 76px 76px;
+      padding-top: 6px;
     }
   }
   &.css-top{
@@ -78,7 +99,6 @@ body{
   &.css-bottom{
     bottom: 0;
   }
-  
 }
 .css-hidden {
   display: none;

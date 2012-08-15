@@ -16,8 +16,13 @@
 
   function init() {
     $('.css-container').on('.css-nav span', 'click', function(){
-      console.log($(this).attr('data-active'));
-      $('.js-container').attr('data-active', $(this).attr('data-active'));
+      var newSection = $(this).attr('data-active')
+        , currentSection = $('.js-container').attr('data-active')
+        ;
+      console.log(newSection, currentSection);
+      $('.js-container').attr('data-active', newSection);
+      $('.js-'+newSection).removeClass('css-hidden');
+      $('.js-'+currentSection).addClass('css-hidden');
     });
   }
 

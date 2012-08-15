@@ -1,7 +1,7 @@
 !!! 5
 html
   head
-    title DUMMYAPP
+    title Kyle Weller
     meta(http-equiv="X-UA-Compatible", content="IE=Edge,chrome=1")
     //if IE
       script
@@ -16,17 +16,22 @@ html
     script(src="pakmanaged.js")
   body
     .css-container.js-container(data-active="main")
-      .css-portfolio.js-portfolio.css-section
+      .css-portfolio.js-portfolio.css-section.css-hidden
         h1 portfolio
         .js-nav.css-nav.css-bottom
           span.css-top(data-active="main") Main
       .css-main.js-main.css-section
         h1 main
+        .css-profile-container.js-profile-container
+          .css-overview.js-overview
+            h2 overview
+          .css-details.js-details
+            h2 details
         .js-nav.css-nav.css-top
           span.css-bottom(data-active="portfolio") Portfolio
         .js-nav.css-nav.css-bottom
           span.css-top(data-active="contact") Contact
-      .css-contact.js-contact.css-section
+      .css-contact.js-contact.css-section.css-hidden
         h1 contact
         .js-nav.css-nav.css-top
           span.css-bottom(data-active="main") Main
