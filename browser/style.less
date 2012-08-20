@@ -4,7 +4,7 @@ body{
   overflow-y: hidden;
 }
 .css-container{
-  background-image: url('./images/wool.png');
+  background-image: url('./images/tiles.png');
   height: 400%;
   width: 100%;
   position: absolute;
@@ -44,24 +44,56 @@ body{
 }
 .css-profile-container{
   background: red;
-  height: 80%;
+  height: 76%;
   width: 70%;
   position: absolute;
   top: 50%;
-  left: 14%;
+  left: 14.1%;
   margin-top: -40%;
+  border: 4px solid #444;
+  border-radius: 5px;
   .css-details{
-    width: 15%;
-    border-right: 1px solid;
-    height: 100%;
-    overflow: hidden;
-    background: green;
+    background: blue;
   }
   .css-overview{
-    float: right;
-    width: 85%;
+    -moz-transition-property: opacity, height;  
+    -moz-transition-duration: .2s, .2s;  
+    -webkit-transition-property: opacity, height;  
+    -webkit-transition-duration: .2s, .2s;
+    background: green;
+    position: absolute;
+    width: 100%;
     height: 100%;
-    background: blue;
+    overflow: hidden;
+    img{
+      height: 280px;
+      position: relative;
+      top: 50%;
+      margin-top: -140px;
+      margin-left: 15px;
+    }
+    .css-view-profile{
+      -moz-transition-property: bottom, margin-bottom;  
+      -moz-transition-duration: .2s, .2s;  
+      -webkit-transition-property: bottom, margin-bottom;  
+      -webkit-transition-duration: .2s, .2s;
+      position: absolute;
+      right: 15px;
+      bottom: 2%;
+      &:before{
+        content: 'Show Resume'
+      }
+    }
+    &.css-mini-overview{
+      height: 8%!important;
+      .css-view-profile{
+        bottom: 50%;
+        margin-bottom: -12px;
+        &:before{
+          content: 'Hide Resume'
+        }
+      }
+    }
   }
 }
 .css-nav{
@@ -84,12 +116,12 @@ body{
     text-align: center;
     &.css-top{
       top: -28px;
-      border-radius: 76px 76px 0px 0px;
+      border-radius: 32px 32px 0px 0px;
       padding-bottom: 6px;
     }
     &.css-bottom{
       top: 0px;
-      border-radius: 0px 0px 76px 76px;
+      border-radius: 0px 0px 32px 32px;
       padding-top: 6px;
     }
   }
@@ -100,7 +132,31 @@ body{
     bottom: 0;
   }
 }
+button{
+  padding: 3px 10px 5px 10px;
+  border-radius: 5px;
+  font-size: 13px;
+  box-shadow: inset 0 -17px 33px -1px #222;
+    //inset 0 30px 35px -18px #FFC925;//#666
+  text-shadow: 0 1px 3px black;
+  font-weight: bold;
+  color: white;
+  background-color: #999;
+  border: none;
+  -webkit-transition-property: box-shadow,text-shadow;
+	-webkit-transition-duration: .2s,.1s;
+  &:hover{
+    text-shadow: 1px 1px 4px black;
+	  box-shadow: inset 0 -13px 33px -1px #222;
+    // inset 0 32px 35px -18px #F5C753;
+	  text-decoration: none;
+	  cursor:pointer;
+  }
+  &:active{
+    box-shadow: inset 0 -13px 30px 0px #333, inset 0px 1px 6px 1px black;
+    -webkit-transition-duration: 0s,.1s;
+  }
+}
 .css-hidden {
   display: none;
 }
-

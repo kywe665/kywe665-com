@@ -24,6 +24,9 @@
       $('.js-'+newSection).removeClass('css-hidden');
       $('.js-'+currentSection).addClass('css-hidden');
     });
+    $('.css-container').on('.js-view-profile', 'click', function(){
+      $('.js-overview').toggleClass('css-mini-overview');
+    });
   }
 
   domReady(init);
