@@ -1,270 +1,186 @@
+html{
+   height: 100%;
+}
 body{
+   height: 100%;
   margin: 0;
   padding: 0;
-  overflow-y: hidden;
 }
-.css-container{
+div.wrapper {
   background: url('./images/dot-pattern.gif') repeat transparent;
-  height: 400%;
-  width: 100%;
-  position: absolute;
-  -moz-transition-property: top;  
-  -moz-transition-duration: .4s;  
-  -webkit-transition-property: top;  
-  -webkit-transition-duration: .4s;
-  &[data-active="portfolio"]{
-    top: 0%;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -80px auto;
+  /*The -100px mentioned above needs to be the exact height of the footer.*/
+  .parent {  
+    height: 430px;
+    -moz-transition-property: height;  
+    -moz-transition-duration: .2s;  
+    -webkit-transition-property: height;  
+    -webkit-transition-duration: .2s;
   }
-  &[data-active="main"]{
-    top: -100%;
-  }
-  &[data-active="contact"]{
-    top: -200%;
-  }
-}
-.css-portfolio{
-  top: 0;
-  bottom: 75%;
-  margin-top: 0px;
-}
-.css-main{
-  top: 25%;
-  bottom: 50%;
-}
-.css-contact{
-  top: 50%;
-  bottom: 25%;
-}
-.css-section{
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  overflow: hidden;
-  margin: 0;
-}
-.css-profile-container{
-  background-color: rgba(0,0,0,0.2);
-  height: 76%;
-  width: 70%;
-  position: absolute;
-  top: 50%;
-  left: 14.1%;
-  margin-top: -40%;
-  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.6);
-  -webkit-box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.6);
-  -moz-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.6);
-  border-radius: 5px;
-  overflow: hidden;
-  .css-details{
-    background: blue;
+
+  .floater {
+    float: left;
+    height: 50%;
     width: 100%;
-    height: 100%;
-    overflow-y: scroll;
-    border-radius: 5px 5px 0px 0px;
-    -webkit-transition-property: opacity;  
-    -webkit-transition-duration: .3s;
+    margin-bottom: -215px;
   }
-  .css-image-container {
-    width: 18%;
-    height: 100%;
-    position: absolute;
-    -webkit-transition-property: width;  
-    -webkit-transition-duration: .3s;
-    z-index: 1;
-    overflow: hidden;
-    margin-left: 15px;
-    margin-top: 5%;
-    img{
-      -webkit-transition-property: border-radius;
-      -webkit-transition-duration: .3s;
-      width: 100%;
-    }
-  }
-  .css-mini-overview + .css-image-container{
-    width: 14%;
-    img{
-      border-radius: 10px;
-    }
-  }
-  .css-overview{
-    -moz-transition-property: background, height;  
-    -moz-transition-duration: .3s, .3s;  
-    -webkit-transition-property: background, height;  
-    -webkit-transition-duration: .3s, .3s;
-    background-color: rgba(72, 73, 65, 0.6);
-    background: -moz-linear-gradient(top,  rgba(135,135,135,0.4) 0%, rgba(76,76,76,0.4) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(135,135,135,0.4)), color-stop(100%,rgba(76,76,76,0.4))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  rgba(135,135,135,0.4) 0%,rgba(76,76,76,0.4) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  rgba(135,135,135,0.4) 0%,rgba(76,76,76,0.4) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  rgba(135,135,135,0.4) 0%,rgba(76,76,76,0.4) 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  rgba(135,135,135,0.4) 0%,rgba(76,76,76,0.4) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc878787', endColorstr='#cc4c4c4c',GradientType=0 ); /* IE6-9 */
+
+  .child {
+    clear: both;
+    height: 430px;
+    width: 80%;
+    margin: 0 auto 0 auto;
+    min-width: 600px;
+    max-width: 890px;
+    background-color: rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.6);
     border-radius: 5px;
-    position: absolute;
-    width: 100%;
-    height: 100%;
     overflow: hidden;
-    z-index: 1;
-    .css-main-intro{
-      -moz-transition-property: background, padding-left, margin-top;
-      -moz-transition-duration: .2s, .2s;  
-      -webkit-transition-property: background, padding-left, margin-top;
-      -webkit-transition-duration: .2s, .2s;
-      width: 78%;
-      padding-left: 22%;
-      position: relative;
-      top: 50%;
-      margin-top: -77px;
-      height: 148px;
-      padding-top: 6px;
-      padding-right: 300px;
-      font-family: Arial;
-      //background: #f1645d;
-      //background: #e46f60;
-      //background: #0092bf;
-      //background: rgba(255, 203, 0, .6);
-      //background: rgba(240, 87, 72, .7);
-      //background: rgba(0, 146, 191, .6);
-      background: rgba(0, 84, 191, .6);
-      //background: rgba(223, 7, 7, .5);
-      overflow: hidden;
-      span{
-        font-size: 60px;
-        display: block;
-        margin-left: 10%;
-        &.css-name{
-          text-shadow: 0px 0px 65px lightblue, 1px 1px 0px lightblue;
-        }
-        &.css-title{
-          color: white;
-          text-shadow: 0px 0px 58px black, 1px 1px 3px black;
-        }
-      }
-    }
-    .css-view-profile{
-      -moz-transition-property: bottom, margin-bottom;  
-      -moz-transition-duration: .2s, .2s;  
-      -webkit-transition-property: bottom, margin-bottom;  
-      -webkit-transition-duration: .2s, .2s;
-      position: absolute;
-      right: 15px;
-      bottom: 2%;
-      &:before{
-        content: 'Show Resume'
-      }
-    }
-    &.css-mini-overview{
-      height: 8%!important;
-      background: -webkit-gradient(linear,left top,right top,color-stop(0%,#252525),color-stop(100%,#494949));
+    .css-details{
+      background: blue;
+      width: 100%;
+      height: 100%;
+      overflow-y: scroll;
       border-radius: 5px 5px 0px 0px;
-      .css-view-profile{
-        bottom: 50%;
-        margin-bottom: -12px;
-        &:before{
-          content: 'Hide Resume'
-        }
+      -webkit-transition-property: opacity;  
+      -webkit-transition-duration: .3s;
+    }
+    .css-image-container {
+      width: 178px;
+      position: absolute;
+      -webkit-transition-property: width, margin-left, margin-top;
+      -webkit-transition-duration: .3s, .3s, .3s;
+      -moz-transition-property: width, margin-left, margin-top;
+      -moz-transition-duration: .3s, .3s, .3s;
+      z-index: 1;
+      overflow: hidden;
+      margin-left: 15px;
+      margin-top: 15px;
+      img{
+        -webkit-transition-property: border-radius;
+        -webkit-transition-duration: .3s;
+        -moz-transition-property: border-radius;
+        -moz-transition-duration: .3s;
+        width: 100%;
       }
+    }
+    .css-mini-overview .css-image-container{
+      width: 90px;
+      margin-left: 6px;
+      margin-top: 6px;
+      img{
+        border-radius: 10px;
+      }
+    }
+    .css-overview{
+      -moz-transition-property: background, height;  
+      -moz-transition-duration: .3s, .3s;  
+      -webkit-transition-property: background, height;  
+      -webkit-transition-duration: .3s, .3s;
+      background-color: rgba(72, 73, 65, 0.6);
+      background: -moz-linear-gradient(top,  rgba(135,135,135,0.4) 0%, rgba(76,76,76,0.4) 100%); /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(135,135,135,0.4)), color-stop(100%,rgba(76,76,76,0.4))); /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top,  rgba(135,135,135,0.4) 0%,rgba(76,76,76,0.4) 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top,  rgba(135,135,135,0.4) 0%,rgba(76,76,76,0.4) 100%); /* Opera 11.10+ */
+      background: -ms-linear-gradient(top,  rgba(135,135,135,0.4) 0%,rgba(76,76,76,0.4) 100%); /* IE10+ */
+      background: linear-gradient(to bottom,  rgba(135,135,135,0.4) 0%,rgba(76,76,76,0.4) 100%); /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc878787', endColorstr='#cc4c4c4c',GradientType=0 ); /* IE6-9 */
+      border-radius: 5px;
+      width: 100%;
+      height: 430px;
+      overflow: hidden;
+      z-index: 1;
       .css-main-intro{
-        background: transparent;
-        padding-left: 16%;
-        position: absolute;
-        margin-top: -24%;
-        height: 100%;
-        padding-top: 0;
+        -moz-transition-property: background, left, margin-top;
+        -moz-transition-duration: .2s, .2s, .2s;
+        -webkit-transition-property: background, left, margin-top;
+        -webkit-transition-duration: .2s, .2s, .2s;
+        width: inherit;
+        position: relative;
+        top: 50%;
+        height: 148px;
+        padding-top: 6px;
+        font-family: Arial;
+        background: rgba(0, 84, 191, 0.6);
+        float: right;
+        margin-top: -74px;
         span{
-          display: inline-block;
-          font-size: 100%!important;
-          font-weight: bold;
-          margin-left: 15px;
-          text-shadow: 1px 1px 0px black!important;
+          -moz-transition-property: font-size, margin-left;
+          -moz-transition-duration: .2s, .2s;
+          -webkit-transition-property: font-size, margin-left;
+          -webkit-transition-duration: .2s, .2s;
+          font-size: 60px;
+          display: block;
+          margin-left: 240px;
           &.css-name{
-            color: white;
+            text-shadow: 0px 0px 65px lightblue, 1px 1px 0px lightblue;
           }
           &.css-title{
-            color: #0092bf;
+            color: white;
+            text-shadow: 0px 0px 58px black, 1px 1px 3px black;
+          }
+        }
+      }
+      .css-view-profile{
+        -moz-transition-property: bottom, margin-bottom;  
+        -moz-transition-duration: .2s, .2s;  
+        -webkit-transition-property: bottom, margin-bottom;  
+        -webkit-transition-duration: .2s, .2s;
+        position: relative;
+        right: 15px;
+        bottom: -312px;
+        float: right;
+        &:before{
+          content: 'Show Resume'
+        }
+      }
+      &.css-mini-overview{
+        height: 38px;
+        background: -webkit-gradient(linear,left top,right top,color-stop(0%,#252525),color-stop(100%,#494949));
+        border-radius: 5px 5px 0px 0px;
+        .css-view-profile{
+          bottom: 134px;
+          &:before{
+            content: 'Hide Resume'
+          }
+        }
+        .css-main-intro{
+          background: transparent;
+          position: relative;
+          margin-top: -13px;
+          left: 108px;
+          span{
+            display: inline-block;
+            font-size: 16px!important;
+            font-weight: bold;
+            margin-left: 15px;
+            text-shadow: 1px 1px 0px black!important;
+            &.css-name{
+              color: white;
+            }
+            &.css-title{
+              color: #0092bf;
+            }
           }
         }
       }
     }
   }
 }
-/*end profile*/
-/*start contact*/
-.css-contact-container{
-  background-color: rgba(0,0,0,0.2);
-  height: 76%;
-  width: 70%;
-  position: absolute;
-  top: 50%;
-  left: 14.1%;
-  margin-top: -40%;
-  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.6);
-  -webkit-box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.6);
-  -moz-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.6);
-  border-radius: 5px;
-  overflow: hidden;
-  .css-map-container{
-    margin-top: 10px;
-    margin-left: 15px;
-    width: 35%;
-    float: left;
-  }
-  .css-links{
-    float: right;
-    position: relative;
-    top: 10px;
-    right: 20px;
-    background: rgba(150,150,150, .5);
-    padding: 10px 20px;
-    border-radius: 40px;
-    a{
-      margin: 10px;
-    }
-    img{
-      width: 50px;
-      &.css-mail{
-        position: relative;
-        top: -4px;
-        background: lightgray;
-      }
-    }
-  }
+div.footer{
+   height: 80px;
+   clear: both;
+   position: relative;
+  background: rgba(0,255,0,.5);
 }
-.css-nav{
-  position: absolute;
-  background: #333;
-  z-index: 1;
-  width: 100%;
-  height: 8px;
-  span{
-    position: absolute;
-    background: #333;
-    left: 50%;
-    margin-left: -55px;
-    line-height: 30px;
-    cursor: pointer;
-    height: 30px;
-    width: 100px;
-    color: #ccc;
-    font-family: arial;
-    text-align: center;
-    &.css-top{
-      top: -28px;
-      border-radius: 32px 32px 0px 0px;
-      padding-bottom: 6px;
-    }
-    &.css-bottom{
-      top: 0px;
-      border-radius: 0px 0px 32px 32px;
-      padding-top: 6px;
-    }
-  }
-  &.css-top{
-    top: 0;
-  }
-  &.css-bottom{
-    bottom: 0;
-  }
+div.nudge{
+   height: 80px;
+   clear: both;
 }
 button{
   padding: 3px 10px 5px 10px;
@@ -296,44 +212,7 @@ button{
 }
 .css-faded{
   opacity: 0;
-}
-.css-resizer{
-  visibility: hidden;
-  font-size: 60px;
-  float: left;
-}
-.css-details::-webkit-scrollbar
-{
-    width: 24px;
-    height: 24px;
-}
-
-.css-details::-webkit-scrollbar-track
-{
-    border: 6px solid transparent;
-    border-radius: 12px;
-    box-shadow: inset 0 0 6px #000000, inset 0 0 0 7px #212121;
-}
-
-.css-details::-webkit-scrollbar-thumb
-{
-    border: 8px solid transparent;
-    border-radius: 12px;
-    box-shadow: inset -1px 0 0 0 #2583ab,
-                inset 1px 0 0 0 #205883,
-                inset 8px 0 4px -4px #2172ab,
-                inset 0 0 1px 6px #269dd3;
-}
-
-/* IE only scroll bar styles */
-.css-details
-{
-    scrollbar-face-color: #226ba4;
-    scrollbar-base-color: #212121;
-    scrollbar-arrow-color: #ffffff;
-    scrollbar-track-color: #212121;
-    scrollbar-shadow-color: #424242;
-    scrollbar-highlight-color: #29a7dd;
-    scrollbar-3dlight-color: #29a7dd;
-    scrollbar-darkshadow-color: #424242;
+  position: relative;
+  top: -430px;
+  display: none;
 }
