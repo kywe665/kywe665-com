@@ -20,11 +20,8 @@
       $('.js-overview').toggleClass('css-mini-overview');
       $('.js-details').toggleClass('css-faded');
     });
-    $('body').on('.js-get-directions', 'click', function(){
-      console.log('click');
-      mapLocation();
-    });
     sizeContainer(true);
+    mapLocation();
   }
   
   function mapLocation() {
@@ -35,16 +32,16 @@
       console.log('gotLocation');
       makeMap(position.coords.latitude, position.coords.longitude);
     }
-    function errLocation() {
-      console.log('err');
+    function errLocation(error) {
+      console.error(error);
+      $('.js-map').addClass('js-deny');
     }
   }
   
   function makeMap(latitude, longitude) {
     var link = 'https://maps.google.com/maps?f=d&saddr='+latitude+','+longitude+'&daddr=637+N+300+E+provo';
     console.log(link);
-    $('.js-link').html('<span>If your popup blocker is on </span><a class="js-generated-link" target="_blank" href="'+link+'">Get Directions Here</a>');
-    $('.js-generated-link').click();
+    $('.js-map').attr('href', link);
   }
   
   function sizeContainer(first) {

@@ -173,10 +173,43 @@ div.wrapper {
   }
 }
 div.footer{
-   height: 80px;
-   clear: both;
-   position: relative;
-  background: rgba(0,255,0,.5);
+  height: 80px;
+  clear: both;
+  position: relative;
+  background: rgba(0, 0, 0, 0.8);
+  .footer-wrap{
+    width: 896px;
+    margin: 0 auto 0 auto;
+    height: 100%;
+    .css-links{
+      padding-top: 12px;
+      float: left;
+      .css-contact{
+        color: #CCC;
+        font-family: 'Arial';
+        font-size: 18px;
+        position: relative;
+        top: -14px;
+      }
+      a{
+        margin: 20px;
+      }
+      img{
+        width: 50px;
+        &.css-mail{
+          position: relative;
+          top: -4px;
+          background: lightgray;
+        }
+      }
+    }
+    .css-map-msg{
+      width: 250px;
+      span{
+        font-weight: normal;
+      }
+    }
+  }
 }
 div.nudge{
    height: 80px;
