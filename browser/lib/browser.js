@@ -14,17 +14,19 @@
     ;
 
   function init() {
-    $(window).resize(function() {
-      sizeContainer();
-    });
-    $('body').on('.js-view-profile', 'click', function(){
-      $('.js-overview').toggleClass('css-mini-overview');
-      $('iframe').toggleClass('css-faded');
-    });
-    window.onorientationchange = function() {
-      sizeContainer();
-    };
-    sizeContainer(true);
+    if(window.location.pathname.length > 1){
+      $(window).resize(function() {
+        sizeContainer();
+      });
+      $('body').on('.js-view-profile', 'click', function(){
+        $('.js-overview').toggleClass('css-mini-overview');
+        $('iframe').toggleClass('css-faded');
+      });
+      window.onorientationchange = function() {
+        sizeContainer();
+      };
+      sizeContainer(true);
+    }
     mapLocation();
   }
   
