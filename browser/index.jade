@@ -27,14 +27,17 @@ html
             button.js-view-profile.css-view-profile
             .css-image-container
               img(src="./images/profilePic.jpg")
-          object.css-details.js-details.css-faded(data="http://kywe665.com/resume.pdf")
+          iframe.css-faded(src="http://docs.google.com/viewer?url=kywe665.com%2Fresume.pdf&embedded=true")(style="border: none;")
+          //object.css-details.js-details.css-faded(data="http://kywe665.com/resume.pdf")
             p Your browser is out of date and is unable to display this content.
             a(href="http://kywe665.com/resume.pdf") Download content here
       .nudge
     .footer
       .footer-wrap
         .css-links
-          span.css-contact Contact Me: 
+          .css-contact
+            span Contact Me:
+            span.number 925.681.9827
           a(href="http://www.facebook.com/kywe665")(target="_blank")
             img(src="./images/f_logo.png")
           a(href="https://github.com/kywe665")(target="_blank")
@@ -47,3 +50,5 @@ html
             img(src="./images/skype.png")
           a.js-map(href="https://maps.google.com/maps?q=637+N+300+E,+Provo,+UT")(target="_blank")
             img(src="./images/maps.png")
+        .css-portfolio
+          span Portfolio

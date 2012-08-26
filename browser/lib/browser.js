@@ -10,6 +10,7 @@
     , domReady = require('domready')
     , request = require('ahr2')
     , navigator = window.navigator
+    , alert = window.alert
     ;
 
   function init() {
@@ -18,8 +19,11 @@
     });
     $('body').on('.js-view-profile', 'click', function(){
       $('.js-overview').toggleClass('css-mini-overview');
-      $('.js-details').toggleClass('css-faded');
+      $('iframe').toggleClass('css-faded');
     });
+    window.onorientationchange = function() {
+      sizeContainer();
+    };
     sizeContainer(true);
     mapLocation();
   }
@@ -48,6 +52,9 @@
     var height = parseInt(window.innerHeight, 10) - 80;
     if((height - 20) > parseInt($('.parent').attr('data-height'), 10)){
       $('.parent').css('height', height+'px');
+    }
+    else{
+      $('.parent').css('height', '430px');
     }
   }
 
