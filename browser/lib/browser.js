@@ -14,7 +14,7 @@
     ;
 
   function init() {
-    if(window.location.pathname.length <= 1){
+    if(window.location.pathname.length <= 1 || window.location.pathname === '/index.html') {
       $(window).resize(function() {
         sizeContainer();
       });

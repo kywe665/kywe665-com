@@ -356,19 +356,20 @@ button{
     .main-body{
       width: 780px;
       min-height: 400px;
-      background: rgba(245, 245, 245, .7);
+      background: rgba(255, 255, 255, .7);
       float: left;
       box-shadow: 0px 0px 10px -2px #333;
       border-radius: 0px 0px 5px 5px;
+      margin-bottom: 15px;
       .project{
-        height: 300px;
-        margin: 20px 0;
+        min-height: 300px;
+        margin: 30px 0;
         .css-project-title{
           height: 40px;
-          width: 300px;
           background: #0054BF;
           position: relative;
           left: -15px;
+          padding-left: 50px;
           float: left;
           box-shadow: 4px 4px 7px -2px black;
           span{
@@ -377,8 +378,23 @@ button{
             font-size: 24px;
             font-family: 'US101';
             margin-top: 7px;
-            margin-right: 50px;
+            margin-right: 20px;
             text-shadow: 0px 1px 0px #444, 0px -1px 0px #111;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -moz-transition-property: margin-right, color;
+            -moz-transition-duration: .2s, .2s;
+            -webkit-transition-property: margin-right, color;
+            -webkit-transition-duration: .2s, .2s;
+            position: relative;
+            &:hover{
+              cursor: default;
+              margin-right: 23px;
+            }
           }
           .css-folded{
             border-color: transparent #7D90A3 transparent transparent;
@@ -387,9 +403,15 @@ button{
             height: 0px;
             width: 0px;
             position: relative;
-            left: -15px;
+            left: -65px;
             top: 26px;
             z-index: -1;
+          }
+          &:hover{
+            span{
+              margin-right: 23px;
+              color: whitesmoke;
+            }
           }
         }
         .css-triangle {
@@ -437,15 +459,60 @@ button{
           left: 68%;
           box-shadow: 6px -5px 8px -4px black;
         }
+        .css-project-description{
+          padding: 0 30px;
+          img{
+            border-radius: 5px;
+            padding: 5px;
+            background: #777;
+            box-shadow: 2px 2px 8px 0px black;
+            margin-top: 10px;
+          }
+          p{
+            font-family: Arial;
+            font-size: 14px;
+            text-indent: 22px;
+            //&:first-line{
+            //  color: red;
+            //}
+          }
+        }
       }
     }
-    .nav{
+    .nav-container{
       width: 180px;
+      position: relative;
       float: right;
-      height: 200px;
-      background: rgba(225, 225, 225, .7);
-      box-shadow: 2px 2px 8px -3px #333, 1px -2px 4px -4px #333;
-      border-radius: 0px 0px 5px 0px;
+      .nav{
+        width: 180px;
+        float: right;
+        min-height: 140px;
+        background: rgba(225, 225, 225, .7);
+        box-shadow: 1px 2px 8px -3px #333, 1px -2px 4px -4px #333;
+        border-radius: 0px 5px 5px 0px;
+        position: fixed;
+        padding-top: 10px;
+        top: 20px;
+        padding-bottom: 10px;
+        a{
+          font-family: 'Arial';
+          text-decoration: none;
+          color: #0092BF;
+          margin-top: 10px;
+          padding-left: 20px;
+          display: block;
+          -moz-transition-property: text-shadow, color;
+          -moz-transition-duration: .1s, .2s;
+          -webkit-transition-property: text-shadow, color;
+          -webkit-transition-duration: .1s, .2s;
+          &:first-child{
+            color: #837B6F;
+          }
+          &:hover{
+            color: #1AC8FF;
+          }
+        }
+      }
     }
   }
   .header{
@@ -459,6 +526,8 @@ button{
     background: -ms-linear-gradient(top,  rgba(76,76,76,1) 0%,rgba(79,79,79,1) 0%,rgba(58,58,58,1) 20%,rgba(44,44,44,1) 50%,rgba(29,29,29,1) 52%,rgba(38,38,38,1) 100%,rgba(45,45,45,1) 100%,rgba(29,29,29,1) 100%); /* IE10+ */
     background: linear-gradient(to bottom,  rgba(76,76,76,1) 0%,rgba(79,79,79,1) 0%,rgba(58,58,58,1) 20%,rgba(44,44,44,1) 50%,rgba(29,29,29,1) 52%,rgba(38,38,38,1) 100%,rgba(45,45,45,1) 100%,rgba(29,29,29,1) 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#1d1d1d',GradientType=0 ); /* IE6-9 */  
+    position: relative;
+    z-index: 1;
   }
   .css-center{
     width: 960px;

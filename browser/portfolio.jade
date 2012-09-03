@@ -27,13 +27,61 @@ html
       .page
         .main-body
           .project
+            a(name="netbug")
             .css-project-title
               span Netbug
               .css-folded
             .css-triangle
-            //img
-            //p Description
-        .nav         
+            .css-project-description
+              img(src="./images/netbug.gif")
+              p Netbug is a tool I designed to help troubleshoot network communications similar to Fiddler and Wireshark. It has a sleek interface that runs in any HTML5 browser and communicates with a server I wrote in Node.js. I created this tool when my software development team was searching for an easier way to monitor and test software over a network. You can open a listener on any local port for HTTP, TCP, and UDP traffic. It will print all the packets received on the line and gives you the option to log the data to your file system. Using HTTP you will have access to the raw headers of the request. The GUI automatically detects JSON and XML and will pretty print the data with syntax highlighting. This project is open source and the code can be found on my github page. It works on Windows, Mac, and Linux. For installation instructions, see the readme on the 
+                a(href="http://github.com/kywe665/network-debugger") project page.
+          .project
+            a(name="laserTruck")
+            .css-project-title
+              span 2nd place Laser Truck Rally
+              .css-folded
+            .css-triangle
+            .css-project-description
+              img(src="./images/laserTruck.gif")
+              p 
+          .project
+            a(name="motionDetector")
+            .css-project-title
+              span Arduino motion detector
+              .css-folded
+            .css-triangle
+            .css-project-description
+              img(src="./images/arduino.gif")
+              p My birthday rolls around and what is on the top of my wishlist? An open source microcontroller known as Arduino. Arduino is any DIY enthusiasts dream. It provides a simple way of interfacing software with external circuitry. My first project with the arduino was creating a motion detector. I built a simple circuit with a photodiode and read in the analog signals. My arduino would then calculate the average ambient light of the room. When it detected a significant difference, it would power another circuit I designed to sound an alarm. Check out the code on the 
+                a(href="http://github.com/kywe665/motion-sensor") project page.
+          .project
+            a(name="ui")
+            .css-project-title
+              span UI Design
+              .css-folded
+            .css-triangle
+            .css-project-description
+              img(src="./images/ui.gif")
+              p Here is the before and after of an interface that I redesigned for a polished professional look.
+          .project
+            a(name="sports")
+            .css-project-title
+              span BYUtv Sports
+              .css-folded
+            .css-triangle
+            .css-project-description
+              img(src="./images/sports.gif")
+              p This is a sports website that I worked on from April 2011 - April 2012. It is a socially interactive site designed to connect BYU sports fans to content, players, and eachother. You can stream live HD games or go back and watch games dated as old as 1984. You can create your own profile, design your own jersey, and upload your own content to share with your friends. I was there at the start of the project and have worked on almost every single page of the website. Check it out at 
+                a(href="http://byutvsports.com") byutvsports.com
+        .nav-container
+          .nav
+            a(href="#top") Back to top >
+            a(href="#netbug") Netbug >
+            a(href="#laserTruck") Laser Truck Rally >
+            a(href="#motionDetector") Arduino Projects >
+            a(href="#ui") UI Design >
+            a(href="#sports") BYUtv Sports >
       .nudge
     .footer
       .footer-wrap
