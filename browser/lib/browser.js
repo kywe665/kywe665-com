@@ -21,6 +21,7 @@
       $('body').on('.js-view-profile', 'click', function(){
         $('.js-overview').toggleClass('css-mini-overview');
         $('iframe').toggleClass('css-faded');
+        $('.css-download').toggleClass('css-hidden');
       });
       window.onorientationchange = function() {
         sizeContainer();

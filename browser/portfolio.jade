@@ -34,7 +34,7 @@ html
             .css-triangle
             .css-project-description
               img(src="./images/netbug.gif")
-              p Netbug is a tool I designed to help troubleshoot network communications similar to Fiddler and Wireshark. It has a sleek interface that runs in any HTML5 browser and communicates with a server I wrote in Node.js. I created this tool when my software development team was searching for an easier way to monitor and test software over a network. You can open a listener on any local port for HTTP, TCP, and UDP traffic. It will print all the packets received on the line and gives you the option to log the data to your file system. Using HTTP you will have access to the raw headers of the request. The GUI automatically detects JSON and XML and will pretty print the data with syntax highlighting. This project is open source and the code can be found on my github page. It works on Windows, Mac, and Linux. For installation instructions, see the readme on the 
+              p Netbug is a tool I designed to help troubleshoot network communications similar to Fiddler and Wireshark. It has a sleek interface that runs in any HTML5 browser and communicates with a server I wrote in Node.js. I created this tool when my software development team was searching for an easier way to monitor and test software communicating over a network. You can open a listener on any local port for HTTP, TCP, and UDP traffic. It will print all the packets received on the port and gives you the option to log the data to your file system. Using HTTP you will have access to the raw headers of the request. The GUI automatically detects JSON and XML and will pretty print the data with syntax highlighting. This project is open source and the code can be found on my github page. It works on Windows, Mac, and Linux. For installation instructions, see the readme on the 
                 a(href="http://github.com/kywe665/network-debugger")(target="_blank") project page.
           .project
             a(name="laserTruck")
@@ -44,15 +44,18 @@ html
             .css-triangle
             .css-project-description
               img(src="./images/truck.gif")
-              p We decided to use simple solar cells as our sensors. The solar cells were sensitive to a wide range of wavelengths in the visible spectrum.
+              p The EE Laser Monster Truck Rally is an annual competition open to any students interested. It is an extracurricular activity receiving no school credits so you really only do it just to have fun. I invited two of my friends to join my team and we were given a remote control truck, a laser pointer and a small budget to buy some circuit building blocks. We were then on our own to engineer the truck to navigate an obstacle course guided by a laser pointer. We were given four weeks to complete the project and we took 2nd place out of 8 teams.
               img(src="./images/amplify.gif")
-              p The laser pointer that we used was modulated to 10kHz so we designed a bandpass filter to attenuate unwanted signals.
+              p We decided to use simple solar cells as our sensors. The solar cells were sensitive to a wide range of wavelengths in the visible spectrum. The laser pointer that we used was modulated at 10kHz so we designed a lowpass filter to attenuate unwanted noise.
               img(src="./images/comparator.gif")
+              p We then used a comparator to ensure that we had a clear high or low signal.
               img(src="./images/hbridge.gif")
-              p We then amplified and rectified the signal to the level required by the truck.
+              p That signal was then sent to an H Bridge to drive the forward/reverse and the left/right motor.
               img(src="./images/breadboard.gif")
+              p All of these circuits were put together on a breadboard.
               img(src="./images/truck-board.gif")
-              p If the forward and reverse H-Bridges for the motor are engaged at the same time the circuit will be destroyed, so we designed some logic to prevent this from happening.
+              p This is the regular chip that previously controlled the truck. We soldered into a few pins to integrate our circuits together.
+              p This project was one of the greatest learning experiences I have had at BYU. I feel like I learned more about analog circuits in those four weeks than I did in two semesters of class. Being on your own to design and solve real world problems is a magnificent experience.
           .project
             a(name="motionDetector")
             .css-project-title
@@ -64,15 +67,6 @@ html
               p My birthday rolls around and what is on the top of my wishlist? An open source microcontroller known as Arduino. Arduino is any DIY enthusiasts dream. It provides a simple way of interfacing software with external circuitry. My first project with the arduino was creating a motion detector. I built a simple circuit with a photodiode and read in the analog signals. My arduino would then calculate the average ambient light of the room. When it detected a significant difference, it would activate another circuit I designed to sound an alarm. Check out the code on the 
                 a(href="http://github.com/kywe665/motion-sensor")(target="_blank") project page.
           .project
-            a(name="ui")
-            .css-project-title
-              span UI Design
-              .css-folded
-            .css-triangle
-            .css-project-description
-              img(src="./images/ui.gif")
-              p Here is the before and after of an interface that I redesigned for a polished professional look.
-          .project
             a(name="sports")
             .css-project-title
               span BYUtv Sports
@@ -82,14 +76,23 @@ html
               img(src="./images/sports.gif")
               p This is a sports website that I worked on from April 2011 - April 2012. It is a socially interactive site designed to connect BYU sports fans to content, players, and eachother. You can stream live HD games or go back and watch games dated as old as 1984. You can create your own profile, design your own jersey, and upload your own content to share with your friends. I was there at the start of the project and have worked on almost every single page of the website. Check it out at 
                 a(href="http://byutvsports.com")(target="_blank") byutvsports.com
+          .project
+            a(name="ui")
+            .css-project-title
+              span UI Design
+              .css-folded
+            .css-triangle
+            .css-project-description
+              img(src="./images/ui.gif")
+              p Here is the before and after of an interface that I redesigned for a polished professional look.
         .nav-container
           .nav
             a(href="#top") Back to top >
             a(href="#netbug") Netbug >
             a(href="#laserTruck") Laser Truck Rally >
             a(href="#motionDetector") Arduino Projects >
-            a(href="#ui") UI Design >
             a(href="#sports") BYUtv Sports >
+            a(href="#ui") UI Design >
       .nudge
     .footer
       .footer-wrap
@@ -97,7 +100,7 @@ html
           .css-contact
             span Contact Me:
             span.number 925.681.9827
-          a(href="mailto:kywe665@gmail.com?subject=Hello%20Kyle&body=Kyle%20Weller,%0A%20I%20would%20like%20to%20meet%20you%20in%20person,%20when%20can%20I%20meet%20you?")(target="_blank")
+          a(href="mailto:kywe665@gmail.com?subject=Hello%20Kyle&body=Kyle%20Weller,%0A%20I%20would%20like%20to%20meet%20you%20in%20person%20to%20learn%20more%20about%20you.")(target="_blank")
             img.css-mail(src="./images/mail.svg")
           a(href="http://www.facebook.com/kywe665")(target="_blank")
             img(src="./images/f_logo.png")
