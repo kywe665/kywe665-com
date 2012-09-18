@@ -183,6 +183,23 @@ body{
             &.css-title{
               color: #0092bf;
             }
+            &.css-download{
+              margin-right: 250px;
+              color: white;
+              font-size: 14px!important;
+              float: right;
+              a{
+                text-decoration: none;
+                color: #0092BF;
+                -moz-transition-property: color;
+                -moz-transition-duration: .2s;
+                -webkit-transition-property: color;
+                -webkit-transition-duration: .2s;
+                &:hover{
+                  color: #1AC8FF;
+                }
+              }
+            }
           }
         }
       }
@@ -205,6 +222,22 @@ div.footer{
     width: 896px;
     margin: 0 auto 0 auto;
     height: 100%;
+    .css-portfolio a{
+      //box-shadow: 0px 3px 40px -3px white, 0px 13px 32px -3px #0092BF;
+    }
+    .css-home{
+      background: #4c4c4c; /* Old browsers */
+      background: -moz-radial-gradient(center, ellipse cover,  #4c4c4c 0%, #262626 0%, #141414 100%, #2d2d2d 100%, #1d1d1d 100%); /* FF3.6+ */
+      background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#4c4c4c), color-stop(0%,#262626), color-stop(100%,#141414), color-stop(100%,#2d2d2d), color-stop(100%,#1d1d1d)); /* Chrome,Safari4+ */
+      background: -webkit-radial-gradient(center, ellipse cover,  #4c4c4c 0%,#262626 0%,#141414 100%,#2d2d2d 100%,#1d1d1d 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-radial-gradient(center, ellipse cover,  #4c4c4c 0%,#262626 0%,#141414 100%,#2d2d2d 100%,#1d1d1d 100%); /* Opera 12+ */
+      background: -ms-radial-gradient(center, ellipse cover,  #4c4c4c 0%,#262626 0%,#141414 100%,#2d2d2d 100%,#1d1d1d 100%); /* IE10+ */
+      background: radial-gradient(ellipse at center,  #4c4c4c 0%,#262626 0%,#141414 100%,#2d2d2d 100%,#1d1d1d 100%); /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#1d1d1d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+      a{
+        color: #0092BF;
+      }
+    }
     .css-links{
       padding-top: 12px;
       float: left;
@@ -214,6 +247,7 @@ div.footer{
         width: 100px;
         float: left;
         padding-top: 22px;
+        margin-right: 28px;
         span{
           display: inline-block;
           color: #CCC;
@@ -261,7 +295,7 @@ div.footer{
   top: 2px;
   a{
     font-family: 'Arial';
-    color: #CCC;
+    color: white;
     text-align: center;
     width: 100%;
     display: inline-block;
@@ -355,6 +389,7 @@ button{
   .page{
     width: 960px;
     margin: 0 auto 0 auto;
+    padding: 0 20px;
     .main-body{
       width: 780px;
       min-height: 400px;
@@ -507,7 +542,7 @@ button{
           -moz-transition-duration: .1s, .2s;
           -webkit-transition-property: text-shadow, color;
           -webkit-transition-duration: .1s, .2s;
-          &:first-child{
+          &:first-child, &:last-child{
             color: #837B6F;
           }
           &:hover{
@@ -542,6 +577,7 @@ button{
       color: #CCC;
       margin-top: 11px;
       text-shadow: 0px 1px 0px #444, 0px -1px 0px #111;
+      margin-left: 8px;
     }
     .css-portfolio, .css-home{
       height: 57px;
